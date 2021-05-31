@@ -2,7 +2,6 @@ Feature: Verify ToDOs API for all http methods.
 
   Scenario: GET : Verify able to retrieve all todos.
     Given url 'https://jsonplaceholder.typicode.com/todos'
-    And request {"userId": 1,"title": "Karate API Demo","body": "Testing and Tooling"}
     When  method POST
     Then  status 201
     And assert response.id == '201'

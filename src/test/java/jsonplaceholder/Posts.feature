@@ -2,7 +2,6 @@ Feature: Verify Posts API for all http methods.
 
   Scenario: GET : Verify able to retrieve all posts.
     Given url 'https://jsonplaceholder.typicode.com/posts'
-    And request {"userId": 1,"title": "Karate API Demo","body": "Testing and Tooling"}
     When  method POST
     Then  status 201
     And assert response.id == '101'
@@ -35,5 +34,5 @@ Feature: Verify Posts API for all http methods.
   Scenario: DELETE : Verify able to Delete the existing post.
     Given url 'https://jsonplaceholder.typicode.com/posts/1'
     When method DELETE
-    Then status 200
+    Then status 300
 
